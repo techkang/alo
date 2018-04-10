@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 from time import clock
 
 from convention import Insert, Bubble, Select
-from advanced import BuiltIn, Merge
+from advanced import BuiltIn, Merge, Heap
 
 # set basic information
-funcs = [Insert, Bubble, Select, BuiltIn, Merge]
+funcs = [Insert, Bubble, Select, BuiltIn, Merge, Heap]
 totals = [200, 400, 800, 1600]
 plot_method_index = 0
 
@@ -30,6 +30,7 @@ def finish(nums):
 
 for total in totals:
     nums = list(np.random.rand(total))  # list is quicker than np.ndarray
+    print('\nInitial numbers succeed! There are %s numbers in total.'%total)
     for func_count in range(len(funcs)):
         func = funcs[func_count]
         temp_nums = nums[:]

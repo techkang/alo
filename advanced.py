@@ -15,7 +15,7 @@ class BuiltIn:
 
 
 class Merge:
-    """Merge sort, a qucik sort method which used recursion method."""
+    """Merge sort, a quick sort method which used recursion method."""
 
     def __init__(self, nums):
         """Constructor for Merge"""
@@ -56,3 +56,55 @@ class Merge:
             index += 1
         for i in range(start, end):
             self.nums[i] = self.allay[i]
+
+
+class Heap:
+    """heapsort, another quick sort method which used recursion and heap method."""
+
+    def __init__(self, nums):
+        """Constructor for Heap"""
+        self.nums = nums
+        self.length = len(nums)
+        self.heap_size = len(nums)
+
+    @staticmethod
+    def parent(i):
+        return int((i - 1) / 2)
+
+    @staticmethod
+    def left(i):
+        return 2 * i + 1
+
+    @staticmethod
+    def right(i):
+        return 2 * i + 2
+
+    def max_heapify(self, i):
+        left = self.left(i)
+        r = self.right(i)
+        largest = i
+        if left < self.heap_size and self.nums[left] > self.nums[i]:
+            largest = left
+        if r < self.heap_size and self.nums[r] > self.nums[largest]:
+            largest = r
+        if largest != i:
+            temp = self.nums[i]
+            self.nums[i] = self.nums[largest]
+            self.nums[largest] = temp
+            self.max_heapify(largest)
+
+    def build_max_heap(self):
+        for i in range(int(self.length / 2), -1, -1):
+            self.max_heapify(i)
+
+    def sort(self):
+        self.build_max_heap()
+        for i in range(self.length - 1, 0, -1):
+            temp = self.nums[0]
+            self.nums[0] = self.nums[i]
+            self.nums[i] = temp
+            self.heap_size -= 1
+            self.max_heapify(0)
+        pass
+
+
