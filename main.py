@@ -6,9 +6,10 @@ import matplotlib.pyplot as plt
 from time import clock
 
 from convention import Insert, Bubble, Select
+from advanced import BuiltIn, Merge
 
 # set basic information
-funcs = [Insert, Bubble, Select]
+funcs = [Insert, Bubble, Select, BuiltIn, Merge]
 totals = [200, 400, 800, 1600]
 plot_method_index = 0
 
@@ -36,7 +37,7 @@ for total in totals:
         func(temp_nums).sort()
         elapse = clock() - start
         result = finish(temp_nums)
-        print('Function %s %s, cost %s seconds.' % (func.__name__, result, str(elapse)))
+        print('Function %s %s cost %s seconds.' % (func.__name__, result, str(elapse)))
         times[func_count].append(elapse)
 
 for func_count in range(len(funcs)):
@@ -44,5 +45,6 @@ for func_count in range(len(funcs)):
     plt.scatter(totals, times[func_count])
 plt.legend()
 plt.xlabel('total numbers'.title())
-plt.ylabel('time consumed(seconds)'.title())
+plt.ylabel('time consumed (seconds)'.title())
+plt.title('sort methods compare'.title())
 plt.show()
