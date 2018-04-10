@@ -29,10 +29,10 @@ def finish(nums):
 
 
 for total in totals:
-    nums = np.random.rand(total)
+    nums = list(np.random.rand(total))  # list is quicker than np.ndarray
     for func_count in range(len(funcs)):
         func = funcs[func_count]
-        temp_nums = nums.copy()
+        temp_nums = nums[:]
         start = clock()
         func(temp_nums).sort()
         elapse = clock() - start
