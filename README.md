@@ -4,22 +4,31 @@
 ##1.Sort Method Compare
 
 ###1.Environment
+
 	Ubuntu 17.10 
 	Python 3.6.4
 	
 ###2.File: 
+
 ####/sort/convention.py
+
 Three convention sort methods, whose time complexity is O(n^2). They are bubble sort, insert sort and select sort.
+
 ####/sort/advanced.py
+
 Four advance sort methods, whose time complexity is O(nlgn). They are built-in sort, merge sort, heap sort and quick sort.
+
 ####/sort/main.py
+
 Quoting convention.py and advanced.py to calculate time consumed and plot  a picture.
 
 ###3.Usage
+
 	cd ./sort
 	python3 main.py
 	
 ###4.Output
+
 The result include time consumed for each sort method and a picture.
 	Initial numbers succeed! There are 200 numbers in total.
 	Function Bubble succeeded! cost 0.00459 seconds.
@@ -74,4 +83,5 @@ The result include time consumed for each sort method and a picture.
 	Function Merge succeeded! cost 0.78786 seconds.
 	Function Quick succeeded! cost 0.44708 seconds.
 	Function BuiltIn succeeded! cost 0.04711 seconds.
+	
 ![Alt result](https://www.github.com/techkang/alo/blob/master/sort/result.png)
