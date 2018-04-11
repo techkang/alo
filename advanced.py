@@ -108,3 +108,39 @@ class Heap:
         pass
 
 
+class Quick:
+    """Quick sort, a very famous sort method. (Although many sort methods are called 'quick sort'."""
+
+    def __init__(self, nums):
+        """Constructor for Quick"""
+        self.nums = nums
+        self.length = len(nums)
+
+    def sort(self):
+        self.quick_sort(0, self.length)
+        pass
+
+    def quick_sort(self, start, end):
+        if start + 1 < end:
+            mid = self.partition(start, end)
+            self.quick_sort(start, mid)
+            self.quick_sort(mid + 1, end)
+
+    def partition(self, start, end):
+        """return a half sorted array which all the left elements is smaller than self.nums[end-1]."""
+        mid = self.nums[end - 1]
+        left = start
+        right = end - 2
+        while left < right:
+            if self.nums[left] > mid:
+                temp = self.nums[left]
+                self.nums[left] = self.nums[right]
+                self.nums[right] = temp
+                right -= 1
+            else:
+                left += 1
+        if mid > self.nums[right]:
+            right += 1
+        self.nums[end - 1] = self.nums[right]
+        self.nums[right] = mid
+        return right
