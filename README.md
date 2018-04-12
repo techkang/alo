@@ -30,6 +30,7 @@ Quoting convention.py and advanced.py to calculate time consumed and plot  a pic
 ### 4.Output
 
 The result include time consumed for each sort method and a picture.
+
 	Initial numbers succeed! There are 200 numbers in total.
 	Function Bubble succeeded! cost 0.00459 seconds.
 	Function Insert succeeded! cost 0.00202 seconds.
