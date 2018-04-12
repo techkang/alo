@@ -1,33 +1,33 @@
-#Kang Sheng's algorithm homework.
+# Kang Sheng's algorithm homework.
 
 
-##1.Sort Method Compare
+## 1.Sort Method Compare
 
-###1.Environment
+### 1.Environment
 
 	Ubuntu 17.10 
 	Python 3.6.4
 	
-###2.File: 
+### 2.File: 
 
-####/sort/convention.py
+#### /sort/convention.py
 
 Three convention sort methods, whose time complexity is O(n^2). They are bubble sort, insert sort and select sort.
 
-####/sort/advanced.py
+#### /sort/advanced.py
 
 Four advance sort methods, whose time complexity is O(nlgn). They are built-in sort, merge sort, heap sort and quick sort.
 
-####/sort/main.py
+#### /sort/main.py
 
 Quoting convention.py and advanced.py to calculate time consumed and plot  a picture.
 
-###3.Usage
+### 3.Usage
 
 	cd ./sort
 	python3 main.py
 	
-###4.Output
+### 4.Output
 
 The result include time consumed for each sort method and a picture.
 	Initial numbers succeed! There are 200 numbers in total.
