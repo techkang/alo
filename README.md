@@ -84,4 +84,4 @@ The result include time consumed for each sort method and a picture.
 	Function Quick succeeded! cost 0.44708 seconds.
 	Function BuiltIn succeeded! cost 0.04711 seconds.
 	
-![Alt result](https://www.github.com/techkang/alo/blob/master/sort/result.png)
+![Alt result](https://raw.githubusercontent.com/techkang/alo/master/sort/result.png)
