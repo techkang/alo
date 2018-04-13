@@ -39,43 +39,7 @@ The result include time consumed for each sort method and a picture.
 	Function Merge succeeded! cost 0.00073 seconds.
 	Function Quick succeeded! cost 0.00037 seconds.
 	Function BuiltIn succeeded! cost 4.00000 seconds.
-
-	Initial numbers succeed! There are 400 numbers in total.
-	Function Bubble succeeded! cost 0.01980 seconds.
-	Function Insert succeeded! cost 0.00812 seconds.
-	Function Select succeeded! cost 0.00617 seconds.
-	Function Heap succeeded! cost 0.00286 seconds.
-	Function Merge succeeded! cost 0.00170 seconds.
-	Function Quick succeeded! cost 0.00085 seconds.
-	Function BuiltIn succeeded! cost 0.00011 seconds.
-
-	Initial numbers succeed! There are 800 numbers in total.
-	Function Bubble succeeded! cost 0.07825 seconds.
-	Function Insert succeeded! cost 0.03523 seconds.
-	Function Select succeeded! cost 0.02583 seconds.
-	Function Heap succeeded! cost 0.00637 seconds.
-	Function Merge succeeded! cost 0.00376 seconds.
-	Function Quick succeeded! cost 0.00191 seconds.
-	Function BuiltIn succeeded! cost 0.00021 seconds.
-
-	Initial numbers succeed! There are 1600 numbers in total.
-	Function Bubble succeeded! cost 0.32836 seconds.
-	Function Insert succeeded! cost 0.14554 seconds.
-	Function Select succeeded! cost 0.10341 seconds.
-	Function Heap succeeded! cost 0.01489 seconds.
-	Function Merge succeeded! cost 0.00818 seconds.
-	Function Quick succeeded! cost 0.00538 seconds.
-	Function BuiltIn succeeded! cost 0.00046 seconds.
-
-	Initial numbers succeed! There are 10000 numbers in total.
-	It will take too long for basic sort method Bubble.
-	It will take too long for basic sort method Insert.
-	It will take too long for basic sort method Select.
-	Function Heap succeeded! cost 0.11678 seconds.
-	Function Merge succeeded! cost 0.06509 seconds.
-	Function Quick succeeded! cost 0.03625 seconds.
-	Function BuiltIn succeeded! cost 0.00327 seconds.
-
+	...
 	Initial numbers succeed! There are 100000 numbers in total.
 	It will take too long for basic sort method Bubble.
 	It will take too long for basic sort method Insert.
@@ -86,3 +50,23 @@ The result include time consumed for each sort method and a picture.
 	Function BuiltIn succeeded! cost 0.04711 seconds.
 	
 ![Alt result](https://raw.githubusercontent.com/techkang/alo/master/sort/result.png)
+## 2.Nearnest Neighbor
+### 1.File
+#### /sort/nn/main.py
+The only python file for nearnest neighbor, it can calculate the nearest distance of all the pairs by divide-and-conquer method.
+### 2.Usage
+	cd alo/nn
+    python3 main.py
+### 3.Output
+	Total numbers: 10, time elapsed: 0.00016
+    Total numbers: 20, time elapsed: 0.00052
+    Total numbers: 40, time elapsed: 0.00124
+    Total numbers: 80, time elapsed: 0.00652
+    Total numbers: 160, time elapsed: 0.01087
+    Total numbers: 320, time elapsed: 0.02149
+    Total numbers: 640, time elapsed: 0.05532
+    Total numbers: 1280, time elapsed: 0.29359
+    Total numbers: 2560, time elapsed: 1.94292
+    Total numbers: 5120, time elapsed: 39.6151
+And a dynamic picture.
+
