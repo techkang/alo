@@ -80,18 +80,24 @@ class Heap:
         return 2 * i + 2
 
     def max_heapify(self, i):
-        left = self.left(i)
-        r = self.right(i)
-        largest = i
-        if left < self.heap_size and self.nums[left] > self.nums[i]:
-            largest = left
-        if r < self.heap_size and self.nums[r] > self.nums[largest]:
-            largest = r
-        if largest != i:
-            temp = self.nums[i]
-            self.nums[i] = self.nums[largest]
-            self.nums[largest] = temp
-            self.max_heapify(largest)
+        largest = i + 1
+        flag = 1
+        while largest != i:
+            if flag:
+                flag = 0
+                largest = i
+            else:
+                i = largest
+            left = self.left(largest)
+            r = self.right(largest)
+            if left < self.heap_size and self.nums[left] > self.nums[i]:
+                largest = left
+            if r < self.heap_size and self.nums[r] > self.nums[largest]:
+                largest = r
+            if largest != i:
+                temp = self.nums[i]
+                self.nums[i] = self.nums[largest]
+                self.nums[largest] = temp
 
     def build_max_heap(self):
         for i in range(int(self.length / 2), -1, -1):
